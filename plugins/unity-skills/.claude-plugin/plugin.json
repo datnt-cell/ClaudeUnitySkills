@@ -1,0 +1,11 @@
+{
+  "name": "unity-skills",
+  "displayName": "Unity Skills",
+  "version": "1.0.0",
+  "description": "Automate the Unity Editor from chat through a local REST API — create and edit scripts, build scenes and prefabs, manage assets/materials/lighting/rendering, run tests, and drive hundreds of Editor operations across grouped domain skills.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "c-sharp"],
+  "license": "MIT"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "claude-unity-skills",
+  "owner": {
+    "name": "vantv"
+  },
+  "description": "Marketplace for the Unity Skills plugin — Unity Editor automation grouped into domain skills.",
+  "plugins": [
+    {
+      "name": "unity-skills",
+      "source": "./plugins/unity-skills",
+      "description": "Automate the Unity Editor from chat through a local REST API — scripts, scenes, prefabs, assets, rendering, networking, and more, organized into domain-grouped skills.",
+      "displayName": "Unity Skills",
+      "version": "1.0.0",
+      "author": {
+        "name": "vantv"
+      },
+      "license": "MIT",
+      "keywords": ["unity", "game-development", "editor-automation"],
+      "category": "game-development"
+    }
+  ]
+}
