@@ -1,0 +1,11 @@
+{
+  "name": "unity-rendering",
+  "displayName": "Unity Skills: Rendering",
+  "version": "1.0.0",
+  "description": "Configure Unity rendering from chat — materials, lights, shaders, Shader Graph, URP settings, post-processing volumes, and Decal Projectors — through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "rendering", "shader", "urp"],
+  "license": "MIT"
+}

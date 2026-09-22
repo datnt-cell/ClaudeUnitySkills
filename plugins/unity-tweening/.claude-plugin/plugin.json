@@ -1,0 +1,11 @@
+{
+  "name": "unity-tweening",
+  "displayName": "Unity Skills: Tweening",
+  "version": "1.0.0",
+  "description": "Automate DOTween Pro and PrimeTween tween/sequence authoring in Unity, plus UniTask async patterns, from chat through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "dotween", "primetween", "unitask"],
+  "license": "MIT"
+}

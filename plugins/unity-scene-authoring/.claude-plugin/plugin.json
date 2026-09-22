@@ -1,0 +1,11 @@
+{
+  "name": "unity-scene-authoring",
+  "displayName": "Unity Skills: Scene Authoring",
+  "version": "1.0.0",
+  "description": "Create and edit GameObjects, Components, Prefabs, and Scenes in the Unity Editor from chat, plus Editor-level control (play/select/undo/redo), through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "gameobject", "prefab", "scene"],
+  "license": "MIT"
+}

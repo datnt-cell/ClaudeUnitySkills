@@ -1,0 +1,11 @@
+{
+  "name": "unity-dev-workflow",
+  "displayName": "Unity Skills: Dev Workflow",
+  "version": "1.0.0",
+  "description": "Cross-cutting Unity Editor developer workflow tools from chat — batch/async job execution, task snapshots and undo orchestration, compile/system diagnostics, console log capture, profiler stats, undo/redo history, Scene View bookmarks, the Unity Test Runner, and more, through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "batch", "testing", "workflow"],
+  "license": "MIT"
+}

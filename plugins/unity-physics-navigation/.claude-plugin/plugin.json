@@ -1,0 +1,11 @@
+{
+  "name": "unity-physics-navigation",
+  "displayName": "Unity Skills: Physics & Navigation",
+  "version": "1.0.0",
+  "description": "Automate Unity physics (raycasts, overlaps, gravity), NavMesh baking/queries, Terrain creation/painting, and ProBuilder mesh editing from chat through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "physics", "navmesh", "terrain", "probuilder"],
+  "license": "MIT"
+}

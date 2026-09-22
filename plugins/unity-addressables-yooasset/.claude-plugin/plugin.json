@@ -1,0 +1,11 @@
+{
+  "name": "unity-addressables-yooasset",
+  "displayName": "Unity Skills: Addressables & YooAsset",
+  "version": "1.0.0",
+  "description": "Automate Unity Addressables and YooAsset hot-update/asset-bundle pipelines, plus HybridCLR hot-update codegen, from chat through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "addressables", "yooasset", "hybridclr"],
+  "license": "MIT"
+}

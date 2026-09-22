@@ -3,19 +3,136 @@
   "owner": {
     "name": "vantv"
   },
-  "description": "Marketplace for the Unity Skills plugin — Unity Editor automation grouped into domain skills.",
+  "description": "Marketplace for Unity Editor automation plugins — install only the domains you need.",
   "plugins": [
     {
-      "name": "unity-skills",
-      "source": "./plugins/unity-skills",
-      "description": "Automate the Unity Editor from chat through a local REST API — scripts, scenes, prefabs, assets, rendering, networking, and more, organized into domain-grouped skills.",
-      "displayName": "Unity Skills",
+      "name": "unity-core",
+      "source": "./plugins/unity-core",
+      "description": "Optional deep-dive companion — full REST protocol detail, operating-mode/error-code reference, and manual guide-mode docs. Not required by the other plugins.",
+      "displayName": "Unity Skills: Core Protocol",
       "version": "1.0.0",
-      "author": {
-        "name": "vantv"
-      },
+      "author": { "name": "vantv" },
       "license": "MIT",
-      "keywords": ["unity", "game-development", "editor-automation"],
+      "category": "game-development"
+    },
+    {
+      "name": "unity-scene-authoring",
+      "source": "./plugins/unity-scene-authoring",
+      "description": "Create and edit GameObjects, Components, Prefabs, and Scenes in the Unity Editor from chat.",
+      "displayName": "Unity Skills: Scene Authoring",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-rendering",
+      "source": "./plugins/unity-rendering",
+      "description": "Configure Unity rendering from chat — materials, lights, shaders, Shader Graph, URP, post-processing, decals.",
+      "displayName": "Unity Skills: Rendering",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-ui",
+      "source": "./plugins/unity-ui",
+      "description": "Build Unity UI from chat — UGUI and UI Toolkit.",
+      "displayName": "Unity Skills: UI",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-scripting",
+      "source": "./plugins/unity-scripting",
+      "description": "Create and edit C# scripts and ScriptableObjects, plus scripting-design advisories.",
+      "displayName": "Unity Skills: Scripting",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-assets-pipeline",
+      "source": "./plugins/unity-assets-pipeline",
+      "description": "Manage Unity's asset pipeline — import, cleanup, optimization, packages, validation.",
+      "displayName": "Unity Skills: Assets Pipeline",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-animation-timeline",
+      "source": "./plugins/unity-animation-timeline",
+      "description": "Automate Animator, Timeline, Cinemachine, and Scene View camera control.",
+      "displayName": "Unity Skills: Animation & Timeline",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-physics-navigation",
+      "source": "./plugins/unity-physics-navigation",
+      "description": "Automate physics, NavMesh, Terrain, and ProBuilder mesh editing.",
+      "displayName": "Unity Skills: Physics & Navigation",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-addressables-yooasset",
+      "source": "./plugins/unity-addressables-yooasset",
+      "description": "Automate Addressables and YooAsset hot-update pipelines, plus HybridCLR.",
+      "displayName": "Unity Skills: Addressables & YooAsset",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-tweening",
+      "source": "./plugins/unity-tweening",
+      "description": "Automate DOTween Pro and PrimeTween tween/sequence authoring, plus UniTask patterns.",
+      "displayName": "Unity Skills: Tweening",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-dev-workflow",
+      "source": "./plugins/unity-dev-workflow",
+      "description": "Cross-cutting Editor developer workflow tools — batch execution, diagnostics, testing, profiling.",
+      "displayName": "Unity Skills: Dev Workflow",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-architecture-advisory",
+      "source": "./plugins/unity-architecture-advisory",
+      "description": "Design-time advisory guidance — project inspection, architecture planning, ADRs, performance review.",
+      "displayName": "Unity Skills: Architecture Advisory",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
+      "category": "game-development"
+    },
+    {
+      "name": "unity-editor-tools",
+      "source": "./plugins/unity-editor-tools",
+      "description": "Low-level fallback tooling — YAML hand-editing, experimental Unity CLI, Behavior graphs.",
+      "displayName": "Unity Skills: Editor Tools",
+      "version": "1.0.0",
+      "author": { "name": "vantv" },
+      "license": "MIT",
       "category": "game-development"
     }
   ]

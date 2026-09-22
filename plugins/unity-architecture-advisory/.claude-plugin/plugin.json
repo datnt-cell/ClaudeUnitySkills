@@ -1,0 +1,11 @@
+{
+  "name": "unity-architecture-advisory",
+  "displayName": "Unity Skills: Architecture Advisory",
+  "version": "1.0.0",
+  "description": "Design-time advisory guidance for Unity projects — project inspection, system/asmdef boundary planning, architecture decision records (ADRs), performance review, small-game blueprints, scene wiring contracts, and authoring UX design. Documentation only, no REST automation.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "architecture", "advisory"],
+  "license": "MIT"
+}

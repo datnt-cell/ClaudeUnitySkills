@@ -1,0 +1,11 @@
+{
+  "name": "unity-animation-timeline",
+  "displayName": "Unity Skills: Animation & Timeline",
+  "version": "1.0.0",
+  "description": "Automate Unity Animator controllers, Timeline tracks/clips, Cinemachine virtual cameras, and Scene View camera control from chat through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "animation", "timeline", "cinemachine"],
+  "license": "MIT"
+}

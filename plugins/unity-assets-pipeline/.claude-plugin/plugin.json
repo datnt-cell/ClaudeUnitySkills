@@ -1,0 +1,11 @@
+{
+  "name": "unity-assets-pipeline",
+  "displayName": "Unity Skills: Assets Pipeline",
+  "version": "1.0.0",
+  "description": "Manage Unity's asset pipeline from chat — asset refresh/find/info, texture/audio/model importers, unused/duplicate asset cleanup, asset optimization, UPM package install/query, and broken-reference validation — through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "assets", "importer"],
+  "license": "MIT"
+}

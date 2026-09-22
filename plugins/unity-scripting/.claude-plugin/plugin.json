@@ -1,0 +1,11 @@
+{
+  "name": "unity-scripting",
+  "displayName": "Unity Skills: Scripting",
+  "version": "1.0.0",
+  "description": "Create and edit C# scripts and ScriptableObjects in Unity from chat through a local REST API, plus scripting-design advisories — asmdef planning, script roles, testability, patterns, and async-model choice.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "scripting", "csharp"],
+  "license": "MIT"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "unity-editor-tools",
+  "displayName": "Unity Skills: Editor Tools",
+  "version": "1.0.0",
+  "description": "Low-level and fallback Unity Editor tooling from chat — hand-editing serialized YAML when REST can't reach the target, the experimental Unity CLI for headless cold-start test/run/build, and Unity Behavior graph automation, through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "yaml", "cli", "behavior"],
+  "license": "MIT"
+}

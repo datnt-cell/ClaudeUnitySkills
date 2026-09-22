@@ -1,0 +1,11 @@
+{
+  "name": "unity-core",
+  "displayName": "Unity Skills: Core Protocol",
+  "version": "1.0.0",
+  "description": "Optional deep-dive companion for the Unity Skills plugins — full REST protocol detail, operating-mode/error-code reference, and manual (hand-in-Editor) guide-mode docs. Every other unity-* plugin already embeds a self-contained protocol summary, so this is not required to use them.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "protocol"],
+  "license": "MIT"
+}

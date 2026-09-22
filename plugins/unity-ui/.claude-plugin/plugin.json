@@ -1,0 +1,11 @@
+{
+  "name": "unity-ui",
+  "displayName": "Unity Skills: UI",
+  "version": "1.0.0",
+  "description": "Build Unity UI from chat — UGUI Canvas/widget creation and UI Toolkit (UXML/USS/UIDocument) editing — through a local REST API.",
+  "author": {
+    "name": "vantv"
+  },
+  "keywords": ["unity", "game-development", "editor-automation", "ui", "ugui", "uitoolkit"],
+  "license": "MIT"
+}
