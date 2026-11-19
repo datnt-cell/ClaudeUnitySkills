@@ -3,137 +3,47 @@
   "owner": {
     "name": "vantv"
   },
-  "description": "Marketplace for Unity Editor automation plugins — install only the domains you need.",
+  "description": "Marketplace skill cho phát triển game Unity — tự động hoá Editor, chuyên gia Unity 6.3, cảm giác chơi và sản xuất âm thanh. Cài theo nhóm (4 nhóm, 36 skill).",
   "plugins": [
     {
-      "name": "unity-core",
-      "source": "./plugins/unity-core",
-      "description": "Optional deep-dive companion — full REST protocol detail, operating-mode/error-code reference, and manual guide-mode docs. Not required by the other plugins.",
-      "displayName": "Unity Skills: Core Protocol",
+      "name": "01-unity-editor-automation",
+      "source": "./plugins/01-unity-editor-automation",
+      "description": "Điều khiển Unity Editor từ chat qua REST server của gói UnitySkills: scene, prefab, material, shader, UI, script, asset, animation, physics, addressables, tween, profiler và tư vấn kiến trúc. 13 skill.",
+      "displayName": "Unity – Tự động hoá Editor (13 bộ công cụ)",
       "version": "1.0.0",
       "author": { "name": "vantv" },
       "license": "MIT",
       "category": "game-development"
     },
     {
-      "name": "unity-scene-authoring",
-      "source": "./plugins/unity-scene-authoring",
-      "description": "Create and edit GameObjects, Components, Prefabs, and Scenes in the Unity Editor from chat.",
-      "displayName": "Unity Skills: Scene Authoring",
+      "name": "02-unity-expert-6-3",
+      "source": "./plugins/02-unity-expert-6-3",
+      "description": "Bộ chuyên gia Unity 6.3 đo lường được: skill dẫn (batch/live editor, toolkit ut_*, AgentKit) + 13 chuyên gia 2D, animation, kiến trúc, gameplay, mobile, performance, pipeline, rendering, shader, UI, VFX, WebGL, world building. 14 skill.",
+      "displayName": "Unity 6.3 – Bộ chuyên gia (14 skill)",
       "version": "1.0.0",
       "author": { "name": "vantv" },
       "license": "MIT",
       "category": "game-development"
     },
     {
-      "name": "unity-rendering",
-      "source": "./plugins/unity-rendering",
-      "description": "Configure Unity rendering from chat — materials, lights, shaders, Shader Graph, URP, post-processing, decals.",
-      "displayName": "Unity Skills: Rendering",
+      "name": "03-game-feel",
+      "source": "./plugins/03-game-feel",
+      "description": "Thiết kế và tinh chỉnh cảm giác chơi: buffer input, coyote time, nhảy cao thấp, camera damping/kick, hit stop, screen shake, xếp lớp phản hồi va chạm, accessibility, kèm recipe C# và rubric chấm điểm.",
+      "displayName": "Game Feel & Juice (cảm giác chơi)",
       "version": "1.0.0",
       "author": { "name": "vantv" },
       "license": "MIT",
       "category": "game-development"
     },
     {
-      "name": "unity-ui",
-      "source": "./plugins/unity-ui",
-      "description": "Build Unity UI from chat — UGUI and UI Toolkit.",
-      "displayName": "Unity Skills: UI",
+      "name": "04-audio-production",
+      "source": "./plugins/04-audio-production",
+      "description": "Tạo, biến đổi, cắt, tách, ghép và trộn âm thanh: nhạc, SFX, foley, ambience, TTS/hội thoại, lồng tiếng, tách stem, chấm nhạc cho video, dựng timeline — kèm playbook hậu kỳ (loudness, loop, crossfade, import Unity, AudioMixer). 8 skill.",
+      "displayName": "Sản xuất âm thanh (Scenario MCP + Unity)",
       "version": "1.0.0",
       "author": { "name": "vantv" },
       "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "unity-scripting",
-      "source": "./plugins/unity-scripting",
-      "description": "Create and edit C# scripts and ScriptableObjects, plus scripting-design advisories.",
-      "displayName": "Unity Skills: Scripting",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "unity-assets-pipeline",
-      "source": "./plugins/unity-assets-pipeline",
-      "description": "Manage Unity's asset pipeline — import, cleanup, optimization, packages, validation.",
-      "displayName": "Unity Skills: Assets Pipeline",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "unity-animation-timeline",
-      "source": "./plugins/unity-animation-timeline",
-      "description": "Automate Animator, Timeline, Cinemachine, and Scene View camera control.",
-      "displayName": "Unity Skills: Animation & Timeline",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "unity-physics-navigation",
-      "source": "./plugins/unity-physics-navigation",
-      "description": "Automate physics, NavMesh, Terrain, and ProBuilder mesh editing.",
-      "displayName": "Unity Skills: Physics & Navigation",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "unity-addressables-yooasset",
-      "source": "./plugins/unity-addressables-yooasset",
-      "description": "Automate Addressables and YooAsset hot-update pipelines, plus HybridCLR.",
-      "displayName": "Unity Skills: Addressables & YooAsset",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "unity-tweening",
-      "source": "./plugins/unity-tweening",
-      "description": "Automate DOTween Pro and PrimeTween tween/sequence authoring, plus UniTask patterns.",
-      "displayName": "Unity Skills: Tweening",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "unity-dev-workflow",
-      "source": "./plugins/unity-dev-workflow",
-      "description": "Cross-cutting Editor developer workflow tools — batch execution, diagnostics, testing, profiling.",
-      "displayName": "Unity Skills: Dev Workflow",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "unity-architecture-advisory",
-      "source": "./plugins/unity-architecture-advisory",
-      "description": "Design-time advisory guidance — project inspection, architecture planning, ADRs, performance review.",
-      "displayName": "Unity Skills: Architecture Advisory",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "unity-editor-tools",
-      "source": "./plugins/unity-editor-tools",
-      "description": "Low-level fallback tooling — YAML hand-editing, experimental Unity CLI, Behavior graphs.",
-      "displayName": "Unity Skills: Editor Tools",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
+      "category": "audio"
     }
   ]
 }

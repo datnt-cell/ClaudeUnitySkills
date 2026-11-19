@@ -1,0 +1,26 @@
+{
+  "name": "01-unity-editor-automation",
+  "displayName": "Unity – Tự động hoá Editor (13 bộ công cụ)",
+  "version": "1.0.0",
+  "description": "Điều khiển Unity Editor từ chat qua REST server của gói UnitySkills: tạo/sửa GameObject, Prefab, Scene, Material, Light, Shader Graph, UGUI/UI Toolkit, Script/ScriptableObject, asset và importer, Animator/Timeline/Cinemachine, Physics/NavMesh/Terrain, Addressables/YooAsset/HybridCLR, DOTween/PrimeTween/UniTask, batch job và Profiler, cùng các bản tư vấn kiến trúc (ADR, blueprint, performance review). Gồm 13 skill: unity-core, unity-scene-authoring, unity-rendering, unity-ui, unity-scripting, unity-assets-pipeline, unity-animation-timeline, unity-physics-navigation, unity-addressables-yooasset, unity-tweening, unity-dev-workflow, unity-architecture-advisory, unity-editor-tools.",
+  "author": { "name": "vantv" },
+  "keywords": [
+    "unity",
+    "editor-automation",
+    "scene",
+    "prefab",
+    "render",
+    "ui",
+    "scripting",
+    "assets",
+    "animation",
+    "timeline",
+    "physics",
+    "navmesh",
+    "addressables",
+    "tween",
+    "profiler",
+    "automation"
+  ],
+  "license": "MIT"
+}
