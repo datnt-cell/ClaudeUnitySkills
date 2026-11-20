@@ -6,7 +6,7 @@ compatibility: Requires Unity Editor 2022.3+/6000.x with the UnitySkills package
 
 # Unity Skills — Core Protocol
 
-> This skill is the shared foundation for the whole Unity Skills plugin collection. Unity's 805 REST skills are split across domain-grouped plugins (unity-scene-authoring, unity-rendering, unity-ui, unity-scripting, unity-assets-pipeline, unity-animation-timeline, unity-physics-navigation, unity-addressables-yooasset, unity-tweening, unity-dev-workflow, unity-architecture-advisory, unity-editor-tools, ...) — each of those plugins embeds its own summary of the checklist below so it can run standalone; this skill is the full detail for users who install it too. Module and reference docs are English-only. Match requests to modules by meaning in any language, and always reply in the user's language.
+> This skill is the shared foundation for the whole Unity Skills plugin collection. Unity's 805 REST skills are split across domain-grouped plugins (unity-scene-authoring, unity-rendering, unity-ui, unity-scripting, unity-assets-pipeline, unity-animation-timeline, unity-physics-navigation, unity-addressables-yooasset, unity-tweening, unity-dev-workflow, unity-editor-tools, ...) — each of those skills carries only the three hard rules (dryRun, batch, error handling) and points here; this skill is the full protocol. Module and reference docs are English-only. Match requests to modules by meaning in any language, and always reply in the user's language.
 
 ## Route first: automate, or guide the user?
 

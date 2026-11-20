@@ -3,8 +3,6 @@ name: unity-dotween-design
 description: Source-anchored design rules for DOTween 1.3.015
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Writing or reviewing DOTween code
 - Building sequences
@@ -66,10 +64,10 @@ Load before writing or reviewing any of:
 
 ## Routing to Other Modules
 
-- Async integration (`ToUniTask`, `AsyncWaitForCompletion`) → load [unitask-design](../unitask-design/SKILL.md) and async (unity-scripting plugin)
-- UI animation (uGUI / UIToolkit) choice between DOTween and native animators → load inspector (unity-architecture-advisory plugin)
-- Architecture / performance review of tween-heavy scenes → load performance (unity-architecture-advisory plugin)
-- Asmdef layout for DOTween consumers (`DOTween.asmdef`, DOTween Modules asmdef) → load asmdef (unity-scripting plugin)
+- Async integration (`ToUniTask`, `AsyncWaitForCompletion`) → load [unitask-design](../unitask-design/SKILL.md) and `references/design/async-model.md` of `scenario-unity-architecture` (plugin 02)
+- UI animation (uGUI / UIToolkit) choice between DOTween and native animators → `references/design/inspector.md` of `scenario-unity-architecture` (plugin 02)
+- Architecture / performance review of tween-heavy scenes → `references/code-red-flags.md` of `scenario-unity-performance` (plugin 02)
+- Asmdef layout for DOTween consumers (`DOTween.asmdef`, DOTween Modules asmdef) → `references/design/asmdef.md` of `scenario-unity-architecture` (plugin 02)
 - Addressables-loaded prefab tween lifetime (bundle unload vs tween running) → load addressables-design (unity-addressables-yooasset plugin)
 
 ## Version Scope

@@ -3,8 +3,6 @@ name: unity-unitask-design
 description: Source-anchored design rules for UniTask 2.5.10
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Writing or reviewing async UniTask code
 - Choosing PlayerLoopTiming
@@ -67,12 +65,12 @@ Load before writing or reviewing any of:
 
 ## Routing to Other Modules
 
-- Choice between `UniTask`, raw `Task`, and `IEnumerator` at the architecture layer → load async (unity-scripting plugin)
+- Choice between `UniTask`, raw `Task`, and `IEnumerator` at the architecture layer → `references/design/async-model.md` of `scenario-unity-architecture` (plugin 02)
 - DOTween tween → UniTask adapter (`tween.ToUniTask(TweenCancelBehaviour, token)`) → load [dotween-design](../dotween-design/SKILL.md)
 - YooAsset handle → UniTask via `handle.ToUniTask()` extension → load yooasset-design (unity-addressables-yooasset plugin)
 - Addressables `AsyncOperationHandle.ToUniTask()` rules → load addressables-design (unity-addressables-yooasset plugin)
-- Performance review of UniTask-heavy code paths (tracker cost, state machine alloc) → load performance (unity-architecture-advisory plugin)
-- Asmdef layout for UniTask consumers (`Cysharp.Threading.Tasks.asmdef` reference) → load asmdef (unity-scripting plugin)
+- Performance review of UniTask-heavy code paths (tracker cost, state machine alloc) → `references/code-red-flags.md` of `scenario-unity-performance` (plugin 02)
+- Asmdef layout for UniTask consumers (`Cysharp.Threading.Tasks.asmdef` reference) → `references/design/asmdef.md` of `scenario-unity-architecture` (plugin 02)
 
 ## Version Scope
 

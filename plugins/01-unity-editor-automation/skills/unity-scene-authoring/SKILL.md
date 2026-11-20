@@ -7,25 +7,13 @@ description: Create and edit GameObjects, Components, Prefabs, and Scenes in the
 
 Part of the Unity Skills plugin. This skill covers module-specific guardrails and routing; the shared REST protocol every call depends on is summarized below.
 
-## Unity Skills protocol (quick reference)
+## Protocol
 
-This plugin talks to the Unity Editor through a local REST server. Before the first skill call in a session:
+Read [`unity-core`](../unity-core/SKILL.md) before the first REST call of the session (health check + `projectName` match, operating mode, schema layers, error codes). Rules that hold for every module below:
 
-1. **`GET /health`** — discover the server (it binds a port in `8090`–`8100`). Read `currentMode` (`"approval"` / `"auto"` / `"bypass"`) and `surfaceProfile` (`full` / `guide` / `noSceneAuthoring`) — confirm `projectName` matches the project you're editing.
-2. Under `approval` mode, the first write to a `FullAuto` skill returns `MODE_RESTRICTED` and needs a user grant; under `auto`/`bypass` writes execute directly.
-
-**dryRun gate**: before executing any skill whose exact parameters you don't already hold, call `POST /skill/<name>?mode=dryRun` and iterate until the response says `valid:true` — never guess parameters from a skill name alone. Then execute the same call without `?mode=dryRun`.
-
-**Batch execution**: when touching 2+ objects, prefer `POST /skills/batch` (`{"steps":[{"skill","args"}],"continueOnError":false}`, up to 50 steps per call, also supports `?mode=dryRun`) over repeated single-item calls.
-
-**Error codes**:
-| Code | Meaning |
-|---|---|
-| `MODE_RESTRICTED` / `MODE_FORBIDDEN` | Needs a user grant, or needs Bypass/Allowlist. |
-| `SURFACE_EXCLUDED` | Hidden by the current `surfaceProfile` — a configuration boundary, not a failure; don't retry or route around it. |
-| `MISSING_PARAM` / `TARGET_NOT_FOUND` | Bad or unresolvable arguments — dryRun for the schema, locate the target first. |
-
-For the full protocol detail, error code catalog, and guide-mode `manual-*` docs, optionally install the `unity-core` plugin — it's not required, this summary covers what you need for this skill.
+- **Never guess parameters.** `POST /skill/<name>?mode=dryRun` until `valid:true`, then run the same call for real. Module docs hold guardrails and traps; exact signatures come from `GET /skills/recommend?includeSchema=true` or `/skills/schema`.
+- **2+ objects → `POST /skills/batch`** (≤50 steps, also takes `?mode=dryRun`).
+- `MODE_RESTRICTED` → ask the user for a grant. `SURFACE_EXCLUDED` is a configuration boundary: don't retry or route around it — switch to guide mode ([`unity-core/SKILL_GUIDE.md`](../unity-core/SKILL_GUIDE.md)).
 
 ## Modules in this skill
 
@@ -45,7 +33,7 @@ Skills are named `<module>_<verb>` (e.g. `gameobject_create`, `component_add`, `
 
 ## Guidance mode
 
-If `surfaceProfile` is `guide` or `noSceneAuthoring`, GameObject/Component/Scene writes may be hidden. In that case, give the user manual step-by-step guidance (menu paths, Inspector fields) instead of calling REST skills; for the full guidance-boundary table and manual-* step-by-step docs, the optional unity-core plugin covers this in more depth.
+If `surfaceProfile` is `guide` or `noSceneAuthoring`, GameObject/Component/Scene writes may be hidden. In that case, give the user manual step-by-step guidance (menu paths, Inspector fields) instead of calling REST skills; the guidance-boundary table and `manual-*` step-by-step docs are in [`unity-core/SKILL_GUIDE.md`](../unity-core/SKILL_GUIDE.md).
 
 ## Batch-first rule
 

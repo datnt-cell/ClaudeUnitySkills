@@ -3,8 +3,6 @@ name: unity-hybridclr
 description: Automate HybridCLR C# hot-update prebuild
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Configuring hot-update assemblies
 - Compiling hot-update DLLs
@@ -20,7 +18,7 @@ Editor-side automation for [HybridCLR](https://hybridclr.doc.code-philosophy.com
 **This module holds zero direct references to the package.** Every call resolves through reflection against the `HybridCLR.Editor` assembly, so the UnitySkills Editor assembly compiles identically whether or not HybridCLR is installed — there is no scripting define to set and no recompile needed after installing.
 
 > **Requires**: `com.code-philosophy.hybridclr` (API anchored to **8.12.0**), IL2CPP scripting backend, Unity 2019.4+ (2022.3+ recommended).
-> **Companion modules**: [yooasset](../yooasset/SKILL.md) for shipping the compiled DLLs as bundles, [yooasset-design](../yooasset-design/SKILL.md) for the runtime loading contract, asmdef (unity-scripting plugin) for assembly-boundary design.
+> **Companion modules**: [yooasset](../yooasset/SKILL.md) for shipping the compiled DLLs as bundles, [yooasset-design](../yooasset-design/SKILL.md) for the runtime loading contract, `references/design/asmdef.md` of `scenario-unity-architecture` (plugin 02) for assembly-boundary design.
 
 ## Guardrails
 
@@ -40,7 +38,7 @@ Editor-side automation for [HybridCLR](https://hybridclr.doc.code-philosophy.com
 - HybridCLR settings, install probing, DLL compilation, generation pipeline, artifact staging → this module.
 - Packing the staged DLLs into bundles, collector configuration, build reports → [yooasset](../yooasset/SKILL.md).
 - Runtime hot-update loading code (`YooAssets.LoadAssetAsync` → `Assembly.Load` → `RuntimeApi.LoadMetadataForAOTAssembly`) → write it yourself using [yooasset-design](../yooasset-design/SKILL.md).
-- Deciding which assemblies belong on the hot-update side → asmdef (unity-scripting plugin).
+- Deciding which assemblies belong on the hot-update side → `references/design/asmdef.md` of `scenario-unity-architecture` (plugin 02).
 - Actual player build → `build_player` or unity-cli (unity-editor-tools plugin).
 
 ## Skills

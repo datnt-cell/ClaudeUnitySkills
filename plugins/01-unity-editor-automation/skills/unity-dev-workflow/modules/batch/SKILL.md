@@ -3,8 +3,6 @@ name: unity-batch
 description: Unified batch and async-job orchestration
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Operating on many objects at once
 - Running or polling long async jobs
@@ -306,7 +304,3 @@ Re-run only the failed items from a previous batch execution report. Returns a n
 | `reportId` | string | Yes | — | Prior batch report ID to resume from |
 | `runAsync` | bool | No | true | Whether to run asynchronously (returns `jobId`) |
 | `chunkSize` | int | No | 100 | Chunk size per retry batch |
-
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.

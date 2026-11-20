@@ -3,8 +3,6 @@ name: unity-behavior
 description: Drive Unity Behavior behavior graphs and blackboard variables
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Wiring NPC/AI decision logic
 - Working with behavior trees/graphs
@@ -159,6 +157,3 @@ This is why `behavior_blackboard_list` reports both `variables` and `overrides` 
 Type and member names were taken from `com.unity.behavior` **1.0.16** sources and cross-checked against the published Scripting API. Public surface (`BehaviorGraphAgent`, `BehaviorGraph`, `BlackboardReference`, `Blackboard`, `BlackboardVariable`, `VariableModel`) is documented and stable. Authoring surface (`BehaviorAuthoringGraph`, `GraphAsset`, `BlackboardAsset`, `BehaviorBlackboardAuthoringAsset`) is **internal** to the package and reached by name — a package upgrade can move it. Every such lookup is null-checked and reports `API_MISMATCH` rather than throwing; `behavior_status` shows exactly which types resolved.
 
 ---
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.

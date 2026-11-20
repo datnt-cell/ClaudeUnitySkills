@@ -11,7 +11,7 @@ Nguồn: `scenario-labs/skills` (MIT), port từ `edemaistre/unity-expert-skills
 | `scenario-unity-expert` | **Skill dẫn** – kênh batch mode / editor đang chạy, Unity CLI, Test Framework, build; nơi chứa toolkit `ut_*` và AgentKit dùng chung |
 | `scenario-unity-2d` | Game 2D: import pixel/HD, PPU, atlas, Tilemap, Rule Tile, 2D light, platformer controller, camera, hit stop, screen shake |
 | `scenario-unity-animation` | Mixamo/retargeting, Animator, blend tree, root motion, IK, Playables, Timeline, Cinemachine 3 |
-| `scenario-unity-architecture` | Cấu trúc code: ScriptableObject vs runtime state, event, save/load, Input System, asmdef, domain reload, Git/Smart Merge/LFS |
+| `scenario-unity-architecture` | Cấu trúc code: ScriptableObject vs runtime state, event, save/load, Input System, asmdef, domain reload, Git/Smart Merge/LFS; checklist thiết kế trong `references/design/` |
 | `scenario-unity-gameplay` | AI tuần tra/đuổi/đánh, NavMesh, state machine, projectile, layer & collision matrix, pooling, DOTS, Netcode, audio mixer |
 | `scenario-unity-mobile` | Android/iOS: frame budget, texture ASTC/ETC2, touch control, safe area, AAB/keystore, Xcode, IAP, ads |
 | `scenario-unity-performance` | Game chậm/giật: Profiler, Profile Analyzer, GC spike, draw call, SRP Batcher, LOD, shader warm-up, IL2CPP |
@@ -46,5 +46,16 @@ theo tên này.
 
 ## Nguồn
 
-Copy nguyên văn từ `scenario-labs/skills` → `skills/game-engines/unity`. Chỉ
-README và plugin manifest này do marketplace viết thêm.
+Copy từ `scenario-labs/skills` → `skills/game-engines/unity`. README và plugin
+manifest do marketplace viết thêm.
+
+### Thay đổi cục bộ so với upstream (giữ lại khi đồng bộ bản mới)
+
+- `description` của 10 skill có thêm câu phân vai với plugin 01 ("To just apply a
+  concrete edit … use unity-… (plugin 01)"); `scenario-unity-2d` thêm câu trỏ sang
+  `unity-game-feel`; `scenario-unity-architecture` thêm phần design review.
+- Thêm `scenario-unity-architecture/references/design/` (12 checklist + README) và
+  `scenario-unity-performance/references/code-red-flags.md` — chuyển từ plugin 01;
+  mục References của hai skill này có link tới.
+- `scenario-unity-expert/references/routing-handoffs.md` thêm mục
+  "Knowing vs doing: plugin 01".

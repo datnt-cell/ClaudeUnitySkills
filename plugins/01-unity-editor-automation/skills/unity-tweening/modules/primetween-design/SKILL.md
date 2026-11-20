@@ -3,8 +3,6 @@ name: unity-primetween-design
 description: Source-anchored design rules for PrimeTween 1.4.6
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Writing or reviewing PrimeTween code
 - Diagnosing tween lifecycle behavior
@@ -41,9 +39,9 @@ Load before writing or reviewing:
 
 ## Routing to Other Modules
 
-- Async control flow or cancellation policy → load async (unity-scripting plugin) and [unitask-design](../unitask-design/SKILL.md).
-- Inspector-authored `TweenSettings` fields → load inspector (unity-architecture-advisory plugin).
-- Tween-heavy performance analysis → load performance (unity-architecture-advisory plugin).
+- Async control flow or cancellation policy → `references/design/async-model.md` of `scenario-unity-architecture` (plugin 02) and [unitask-design](../unitask-design/SKILL.md).
+- Inspector-authored `TweenSettings` fields → `references/design/inspector.md` of `scenario-unity-architecture` (plugin 02).
+- Tween-heavy performance analysis → `references/code-red-flags.md` of `scenario-unity-performance` (plugin 02).
 - Addressables-loaded targets or scene lifetime → load addressables-design (unity-addressables-yooasset plugin).
 
 ## Version Scope

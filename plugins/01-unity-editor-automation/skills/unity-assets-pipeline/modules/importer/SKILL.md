@@ -3,8 +3,6 @@ name: unity-importer
 description: Configure asset import settings
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Adjusting how assets import
 - Setting texture compression or sprite modes
@@ -184,5 +182,4 @@ unity_skills.call_skill("asset_reimport", assetPath="Assets/Audio/bgm.mp3")
 
 ## Exact Signatures
 
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.
 Load `IMPORT_REFERENCE.md` for extended asset search/query helpers, platform overrides, rig/animation details, and importer-side best practices.

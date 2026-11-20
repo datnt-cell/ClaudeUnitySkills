@@ -3,8 +3,6 @@ name: unity-material
 description: Edit material and shader properties across Built-in/URP/HDRP
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Changing how a surface looks
 - Tweaking material parameters
@@ -88,7 +86,6 @@ Create multiple materials.
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
 
-
 **Returns**: `{success, totalItems, successCount, failCount, results: [{success, name, path}]}`
 
 ```python
@@ -114,7 +111,6 @@ Assign materials to multiple objects.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
-
 
 **Returns**: `{success, totalItems, successCount, failCount, results: [{success, gameObject, material}]}` — each item echoes `gameObject` (the object name) and `material` (the assigned asset path); failures come back as `{error, target}`.
 
@@ -147,7 +143,6 @@ Set colors on multiple objects. Each item accepts: identifier (`name`/`instanceI
 | `items` | json string | Yes | - | JSON array of `{name\|instanceId\|path, r, g, b, a}` per-item objects (see example below) |
 | `propertyName` | string | No | auto-detect | Default color property applied to all items unless overridden |
 
-
 **Returns**: `{success, totalItems, successCount, failCount, results: [{target, success}]}` — the per-item key is `target` (GameObject name, or the path when you addressed the asset), not `name`; failures come back as `{error, target}`.
 
 ```python
@@ -175,7 +170,6 @@ Set emission on multiple objects.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
-
 
 **Returns**: `{success, totalItems, successCount, failCount, results: [{success, name}]}`
 
@@ -381,13 +375,9 @@ Skills auto-detect and adapt to your render pipeline:
 5. URP/HDRP have different property names than Standard
 
 ---
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.
-
 ## Common Errors
 
-Full transport-level codes (COMPILING/RATE_LIMIT etc.) are in the unity-core plugin (optional), references/protocol-error-codes.md.
+Full transport-level codes (COMPILING/RATE_LIMIT etc.): `unity-core/references/protocol-error-codes.md`.
 
 | Error | Trigger | Fix |
 |---|---|---|

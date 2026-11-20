@@ -3,13 +3,13 @@
   "owner": {
     "name": "vantv"
   },
-  "description": "Marketplace skill cho phát triển game Unity — tự động hoá Editor, chuyên gia Unity 6.3, cảm giác chơi và sản xuất âm thanh. Cài theo nhóm (4 nhóm, 36 skill).",
+  "description": "Marketplace skill cho phát triển game Unity — tự động hoá Editor, chuyên gia Unity 6.3, cảm giác chơi và sản xuất âm thanh. Cài theo nhóm (4 nhóm, 35 skill).",
   "plugins": [
     {
       "name": "01-unity-editor-automation",
       "source": "./plugins/01-unity-editor-automation",
-      "description": "Điều khiển Unity Editor từ chat qua REST server của gói UnitySkills: scene, prefab, material, shader, UI, script, asset, animation, physics, addressables, tween, profiler và tư vấn kiến trúc. 13 skill.",
-      "displayName": "Unity – Tự động hoá Editor (13 bộ công cụ)",
+      "description": "Điều khiển Unity Editor từ chat qua REST server của gói UnitySkills: scene, prefab, material, shader, UI, script, asset, animation, physics, addressables, tween, profiler. 12 skill.",
+      "displayName": "Unity – Tự động hoá Editor (12 bộ công cụ)",
       "version": "1.0.0",
       "author": { "name": "vantv" },
       "license": "MIT",

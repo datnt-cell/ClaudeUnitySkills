@@ -1,18 +1,11 @@
----
-name: unity-performance
-description: Advise on Unity performance red flags
----
+# Unity Performance Red Flags
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
-## Triggers
+**Use when:**
 - Reviewing performance
 - Diagnosing frame drops
 - Reducing allocations
 - Planning pooling/optimization
 - 做性能审查、诊断掉帧或卡顿、减少内存分配、规划对象池/优化
-
-# Unity Performance Red Flags
 
 Use this skill for a high-signal review of likely Unity performance issues. Focus on red flags, not speculative micro-optimizations.
 
@@ -69,8 +62,6 @@ The same principle as the "possibility write" rule above — the runtime pays fo
 - Expected gain category: clarity / frame time / GC / scalability
 
 ## Guardrails
-
-> **Mode**: Documentation only — no REST skills to gate; load freely under any operating mode (Approval / Auto / Bypass).
 
 - Do not recommend large refactors without a meaningful hotspot.
 - Do not replace simple code with unreadable “optimized” code unless the hot path is real.

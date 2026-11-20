@@ -3,8 +3,6 @@ name: unity-event
 description: Wire UnityEvent persistent listeners at editor time
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Hooking up UnityEvents in the Inspector
 - Wiring button or trigger callbacks
@@ -209,6 +207,3 @@ Get the number of persistent listeners on a UnityEvent.
 **Returns:** `{ success, count }`
 
 ---
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.

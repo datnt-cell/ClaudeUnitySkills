@@ -3,8 +3,6 @@ name: unity-terrain
 description: Operate on Unity Terrain
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Creating or editing terrain
 - Sculpting or smoothing heightmap
@@ -333,6 +331,3 @@ unity_skills.call_skill("workflow_session_undo", sessionId=sessions['sessions'][
 ```
 
 ---
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.

@@ -3,8 +3,6 @@ name: unity-addressables-design
 description: Source-anchored design rules for Unity Addressables 1.22.3/2.9.1
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Writing or reviewing Addressables code
 - Async asset/scene loading
@@ -83,10 +81,10 @@ Load before writing or reviewing any of:
 
 ## Routing to Other Modules
 
-- Asmdef layout for Addressables consumers → load asmdef (unity-scripting plugin)
-- Async orchestration across multiple Addressables operations → load async (unity-scripting plugin)
-- Architecture-level decisions (Addressables vs YooAsset, group strategy) → load architecture (unity-architecture-advisory plugin)
-- Performance review of load/release hot paths → load performance (unity-architecture-advisory plugin)
+- Asmdef layout for Addressables consumers → `references/design/asmdef.md` of `scenario-unity-architecture` (plugin 02)
+- Async orchestration across multiple Addressables operations → `references/design/async-model.md` of `scenario-unity-architecture` (plugin 02)
+- Architecture-level decisions (Addressables vs YooAsset, group strategy) → `references/design/architecture-plan.md` of `scenario-unity-architecture` (plugin 02)
+- Performance review of load/release hot paths → `references/code-red-flags.md` of `scenario-unity-performance` (plugin 02)
 
 ## Version Scope
 

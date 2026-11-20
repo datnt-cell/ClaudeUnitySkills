@@ -3,8 +3,6 @@ name: unity-workflow
 description: Persistent operation history and orchestration
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Undoing a whole task or session
 - Snapshotting before risky changes
@@ -346,7 +344,3 @@ The following operations are **automatically tracked** for undo when a session/t
 - `cinemachine_create_vcam`
 
 For **modification operations**, the system auto-snapshots target objects before changes when possible.
-
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.

@@ -1,23 +1,14 @@
----
-name: unity-patterns
-description: Advise on choosing Unity design patterns
----
+# Unity Pattern Selector
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
-## Triggers
+**Use when:**
 - Deciding which pattern fits a problem
 - Structuring decoupled systems
 - Choosing event/state-machine/pool approaches
 - 判断哪种模式适合某问题、构建解耦系统、在事件/状态机/对象池方案间抉择
 
-# Unity Pattern Selector
-
 Use this skill to decide whether a pattern is justified. Do not recommend every pattern at once.
 
 ## Guardrails
-
-> **Mode**: Documentation only — no REST skills to gate; load freely under any operating mode (Approval / Auto / Bypass).
 
 - Recommend at most 1-3 patterns, and explain why simpler options are not enough.
 
