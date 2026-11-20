@@ -3,45 +3,29 @@
   "owner": {
     "name": "vantv"
   },
-  "description": "Marketplace skill cho phát triển game Unity — tự động hoá Editor, chuyên gia Unity 6.3, cảm giác chơi và sản xuất âm thanh. Cài theo nhóm (4 nhóm, 35 skill).",
+  "description": "Marketplace skill cho phát triển game Unity và sản xuất âm thanh — mỗi mảng là một skill (2 plugin, 20 skill).",
   "plugins": [
     {
-      "name": "01-unity-editor-automation",
-      "source": "./plugins/01-unity-editor-automation",
-      "description": "Điều khiển Unity Editor từ chat qua REST server của gói UnitySkills: scene, prefab, material, shader, UI, script, asset, animation, physics, addressables, tween, profiler. 12 skill.",
-      "displayName": "Unity – Tự động hoá Editor (12 bộ công cụ)",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
+      "name": "unity",
+      "source": "./plugins/unity",
+      "description": "Mỗi mảng phát triển game Unity là một skill: core (kết nối Unity qua REST/batch/CLI, test, build), scene, code, UI, rendering, shaders, VFX, animation, 2D, gameplay, world, game feel, assets & build, performance, mobile, web, tween & async. Mỗi skill gồm kiến thức chuyên gia đo lường được (references/), thao tác trực tiếp trong Editor đang mở qua REST server UnitySkills (actions/) và code chạy headless/batch (scripts/).",
+      "displayName": "Unity – bộ skill theo mảng (17 skill)",
+      "version": "2.0.0",
+      "author": {
+        "name": "vantv"
+      },
       "license": "MIT",
       "category": "game-development"
     },
     {
-      "name": "02-unity-expert-6-3",
-      "source": "./plugins/02-unity-expert-6-3",
-      "description": "Bộ chuyên gia Unity 6.3 đo lường được: skill dẫn (batch/live editor, toolkit ut_*, AgentKit) + 13 chuyên gia 2D, animation, kiến trúc, gameplay, mobile, performance, pipeline, rendering, shader, UI, VFX, WebGL, world building. 14 skill.",
-      "displayName": "Unity 6.3 – Bộ chuyên gia (14 skill)",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "03-game-feel",
-      "source": "./plugins/03-game-feel",
-      "description": "Thiết kế và tinh chỉnh cảm giác chơi: buffer input, coyote time, nhảy cao thấp, camera damping/kick, hit stop, screen shake, xếp lớp phản hồi va chạm, accessibility, kèm recipe C# và rubric chấm điểm.",
-      "displayName": "Game Feel & Juice (cảm giác chơi)",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
-      "license": "MIT",
-      "category": "game-development"
-    },
-    {
-      "name": "04-audio-production",
-      "source": "./plugins/04-audio-production",
-      "description": "Tạo, biến đổi, cắt, tách, ghép và trộn âm thanh: nhạc, SFX, foley, ambience, TTS/hội thoại, lồng tiếng, tách stem, chấm nhạc cho video, dựng timeline — kèm playbook hậu kỳ (loudness, loop, crossfade, import Unity, AudioMixer). 8 skill.",
-      "displayName": "Sản xuất âm thanh (Scenario MCP + Unity)",
-      "version": "1.0.0",
-      "author": { "name": "vantv" },
+      "name": "audio",
+      "source": "./plugins/audio",
+      "description": "Tạo và biên tập âm thanh qua Scenario MCP (nhạc, bài hát có vocal, SFX, foley, ambience, TTS, lồng tiếng, đổi giọng, tách stem, chấm nhạc cho video; các họ model ElevenLabs / ACE-Step / MiniMax Music / Sonilo là tài liệu tham chiếu bên trong), hậu kỳ ra bộ âm thanh hoàn chỉnh cho game (loudness, loop, crossfade, đặt tên, import Unity, AudioMixer) và dựng video từ clip.",
+      "displayName": "Âm thanh – tạo, hậu kỳ, dựng video (3 skill)",
+      "version": "2.0.0",
+      "author": {
+        "name": "vantv"
+      },
       "license": "MIT",
       "category": "audio"
     }

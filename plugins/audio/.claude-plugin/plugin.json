@@ -1,0 +1,9 @@
+{
+  "name": "audio",
+  "displayName": "Âm thanh – tạo, hậu kỳ, dựng video (3 skill)",
+  "version": "2.0.0",
+  "description": "Tạo và biên tập âm thanh qua Scenario MCP (nhạc, bài hát có vocal, SFX, foley, ambience, TTS, lồng tiếng, đổi giọng, tách stem, chấm nhạc cho video; các họ model ElevenLabs / ACE-Step / MiniMax Music / Sonilo là tài liệu tham chiếu bên trong), hậu kỳ ra bộ âm thanh hoàn chỉnh cho game (loudness, loop, crossfade, đặt tên, import Unity, AudioMixer) và dựng video từ clip.",
+  "author": { "name": "vantv" },
+  "keywords": ["audio", "sound", "music", "sfx", "foley", "voice", "tts", "dubbing", "stem-separation", "scenario", "unity-audio", "video"],
+  "license": "MIT"
+}

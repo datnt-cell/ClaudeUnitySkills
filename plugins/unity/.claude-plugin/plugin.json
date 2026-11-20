@@ -1,0 +1,9 @@
+{
+  "name": "unity",
+  "displayName": "Unity – bộ skill theo mảng (17 skill)",
+  "version": "2.0.0",
+  "description": "Mỗi mảng phát triển game Unity là một skill: core (kết nối Unity qua REST/batch/CLI, test, build), scene, code, UI, rendering, shaders, VFX, animation, 2D, gameplay, world, game feel, assets & build, performance, mobile, web, tween & async. Mỗi skill gồm kiến thức chuyên gia đo lường được (references/), thao tác trực tiếp trong Editor đang mở qua REST server UnitySkills (actions/) và code chạy headless/batch (scripts/).",
+  "author": { "name": "vantv" },
+  "keywords": ["unity", "unity6", "editor-automation", "urp", "ui", "shaders", "vfx", "animation", "2d", "gameplay", "performance", "mobile", "webgl", "addressables", "tween", "game-feel"],
+  "license": "MIT"
+}
