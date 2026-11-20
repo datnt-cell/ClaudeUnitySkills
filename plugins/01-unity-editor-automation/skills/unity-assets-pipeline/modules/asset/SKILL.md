@@ -3,8 +3,6 @@ name: unity-asset
 description: Manage Unity AssetDatabase operations
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Organizing project assets
 - Importing or relocating files
@@ -68,7 +66,6 @@ Import multiple external files.
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
 
-
 `items` currently expects a JSON string, not a native array.
 
 **Returns**: `{success, totalItems, successCount, failCount, results: [{success, sourcePath, destinationPath}]}`
@@ -94,7 +91,6 @@ Delete multiple assets.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
-
 
 `items` currently expects a JSON string, not a native array.
 
@@ -122,7 +118,6 @@ Move multiple assets.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
-
 
 `items` currently expects a JSON string, not a native array.
 
@@ -174,7 +169,6 @@ Create multiple folders.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
-
 
 `items` currently expects a JSON string, not a native array. The parent folder of each entry must already exist, so order nested folders outermost-first within one call.
 
@@ -261,13 +255,9 @@ unity_skills.call_skill("asset_move_batch", items=[
 5. Backup before bulk delete operations
 
 ---
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.
-
 ## Common Errors
 
-Full transport-level codes (COMPILING/RATE_LIMIT etc.) are in the unity-core plugin (optional), references/protocol-error-codes.md.
+Full transport-level codes (COMPILING/RATE_LIMIT etc.): `unity-core/references/protocol-error-codes.md`.
 
 | Error | Trigger | Fix |
 |---|---|---|

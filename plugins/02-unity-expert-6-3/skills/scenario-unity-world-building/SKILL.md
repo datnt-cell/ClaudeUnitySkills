@@ -1,6 +1,6 @@
 ---
 name: scenario-unity-world-building
-description: "Use when building a Unity 6.3 level or open world: terrain from code or heightmaps, procedural islands, erosion, splat and foliage rules, trees and grass, ProBuilder graybox, level gym, modular kit and prefab placement, set dressing, landmarks and player guidance, the island's edge, spline roads, WFC, fog, additive scene streaming, or a world that hitches, pops in, leaks memory or runs slow on mobile. Keywords: Terrain, TerrainData, ProBuilder, blockout, graybox, modular kit, NavMesh, LoadSceneAsync, open world."
+description: "Use when building a Unity 6.3 level or open world: terrain from code or heightmaps, procedural islands, erosion, splat and foliage rules, trees and grass, ProBuilder graybox, level gym, modular kit and prefab placement, set dressing, landmarks and player guidance, the island's edge, spline roads, WFC, fog, additive scene streaming, or a world that hitches, pops in, leaks memory or runs slow on mobile. Keywords: Terrain, TerrainData, ProBuilder, blockout, graybox, modular kit, NavMesh, LoadSceneAsync, open world. To just apply a concrete edit in an Editor that runs the UnitySkills REST server, use unity-physics-navigation (plugin 01)."
 license: MIT
 ---
 

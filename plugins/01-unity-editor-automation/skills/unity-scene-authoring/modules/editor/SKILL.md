@@ -3,8 +3,6 @@ name: unity-editor
 description: Control and observe the Unity Editor state
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Reading persistent scene/file changes
 - Driving play mode
@@ -256,13 +254,9 @@ print(step_status["details"]["frameCount"], step_status["details"]["isPaused"])
 5. Use `editor_get_context` to get instanceId for batch operations
 6. Menu commands must match exact paths
 
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.
-
 ## Common Errors
 
-Full transport-level codes (COMPILING/RATE_LIMIT etc.) are in the unity-core plugin (optional), references/protocol-error-codes.md.
+Full transport-level codes (COMPILING/RATE_LIMIT etc.): `unity-core/references/protocol-error-codes.md`.
 
 | Error | Trigger | Fix |
 |---|---|---|

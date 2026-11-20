@@ -1,6 +1,6 @@
 ---
 name: scenario-unity-performance
-description: "Use when a Unity 6.3 game is slow or stutters: low fps, frame spikes, hitches when entering areas or on first effects, GC spikes, too many draw calls or SetPass calls, CPU vs GPU bound questions, Profiler, Profile Analyzer, Memory Profiler, Frame Debugger or Project Auditor work, GPU Resident Drawer or SRP Batcher setup, LOD and Mesh LOD, shader warm-up and variants, memory or VRAM budgets, IL2CPP and build size, or proving a fix with numbers from a player."
+description: "Use when a Unity 6.3 game is slow or stutters: low fps, frame spikes, hitches when entering areas or on first effects, GC spikes, too many draw calls or SetPass calls, CPU vs GPU bound questions, Profiler, Profile Analyzer, Memory Profiler, Frame Debugger or Project Auditor work, GPU Resident Drawer or SRP Batcher setup, LOD and Mesh LOD, shader warm-up and variants, memory or VRAM budgets, IL2CPP and build size, or proving a fix with numbers from a player. To just apply a concrete edit in an Editor that runs the UnitySkills REST server, use unity-dev-workflow (plugin 01)."
 license: MIT
 ---
 
@@ -201,6 +201,8 @@ e-book p. 31); VSync off in release; the benchmark path between before and after
 - [`references/critique.md`](references/critique.md): the rubric for judging a performance pass.
 - [`references/gui-paths.md`](references/gui-paths.md): Profiler, Frame Debugger, Rendering
   Debugger, Project Auditor and settings paths.
+- [`references/code-red-flags.md`](references/code-red-flags.md): a quick code-review pass for
+  hot-path red flags (Update sprawl, lookups, allocations, logging in release) before profiling.
 - [`references/sources.md`](references/sources.md): every source with credentials, URLs, best
   timestamps and revision history.
 - [`scripts/ut_perf.py`](scripts/ut_perf.py) (runner side),

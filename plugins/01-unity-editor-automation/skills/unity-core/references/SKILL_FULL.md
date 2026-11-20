@@ -36,7 +36,7 @@ Python helper shortcuts — **these are `unity_skills.py` functions, not skill n
 
 Use module `SKILL.md` files for routing guidance, guardrails, and minimal examples, not as the canonical source of exact signatures.
 
-Current snapshot: `805` REST skills, `56` `*Skills.cs` source files grouped into `54` `SkillCategory` categories (the two differ by design: `BatchSkills.cs` holds no category of its own and registers into Workflow and Validation, `DiagnoseSkills.cs` folds into Debug), `82` module documentation directories (`54` REST/module docs + `28` advisory docs), Unity `2022.3+`, default timeout `15 minutes`.
+Current snapshot: `805` REST skills, `56` `*Skills.cs` source files grouped into `54` `SkillCategory` categories (the two differ by design: `BatchSkills.cs` holds no category of its own and registers into Workflow and Validation, `DiagnoseSkills.cs` folds into Debug), `69` module documentation directories (`54` REST/module docs + `15` library-specific advisory docs), Unity `2022.3+`, default timeout `15 minutes`.
 
 Python helper: `unity-skills/scripts/unity_skills.py`
 
@@ -147,7 +147,7 @@ The REST surface (`805` skills) is partitioned by `[UnitySkill]` `Mode` and runt
 SemiAuto (read/query/analyze) skills are directly callable in every mode and span the modules below; use `GET /skills/schema?category=<Category>` for the exact list (write skills in the same modules stay FullAuto):
 
 - **script** (`script_read` / `script_list` / `script_get_info` / `script_find_in_file` / `script_get_compile_feedback`) · **perception** (`scene_analyze` / `scene_context` / `scene_health_check` / `scene_find_hotspots` / `project_stack_detect` — the module is named perception but its skills carry the `scene_*` prefix) · **scene** (`scene_get_info` / `scene_get_hierarchy` / `scene_get_loaded` / `scene_find_objects`) · **editor** (`editor_get_context` / `editor_get_state` / `editor_get_selection` / `editor_get_tags` / `editor_get_layers`) · **asset** (`asset_find` / `asset_get_info`) · **workflow** (`workflow_list` / `workflow_session_*` / `workflow_plan` — prefer workflow & batch helpers for planning/preview/jobs/rollback) · **debug + console** (`debug_check_compilation` / `debug_get_errors` / `debug_get_system_info` / `debug_get_memory_info` / `debug_get_logs` / `console_get_logs`)
-- plus most modules' own info / list / get / find skills. **Advisory**: `28` documentation-only modules (no REST skills) — see Coding Reference Index below.
+- plus most modules' own info / list / get / find skills. **Advisory**: `15` documentation-only modules (no REST skills) — see Coding Reference Index below.
 
 ## Compilation Feedback, Events & Telemetry
 
@@ -197,25 +197,14 @@ Every error response carries a top-level `errorCode` (plus `retryStrategy` / `re
 
 ## Coding Reference Index
 
-Before writing or refactoring Unity code, **load the relevant advisory module first**. These are the `28` `Documentation only` design modules (no REST skills — loadable under any mode) that pin rules to engine source and prevent hallucinated / removed APIs. Load on demand by topic, not all at once.
+Before writing or refactoring Unity code, **load the relevant advisory module first**. These are the `Documentation only` design modules (no REST skills — loadable under any mode) that pin rules to engine source and prevent hallucinated / removed APIs. Load on demand by topic, not all at once.
 
-**General coding & architecture** — before writing gameplay code or making structural decisions:
+**General coding & architecture** — these checklists live in plugin 02, not here:
 
-| Module | Load when |
+| Need | Read |
 |---|---|
-| `project-scout` | Before proposing changes in an existing project — first check Unity version, packages, asmdef, folders, coding patterns |
-| `architecture` | Module boundaries, scene design, SOLID structure, decoupling, refactor direction |
-| `script-roles` | Whether a class should be a MonoBehaviour, ScriptableObject, plain C# service, or installer |
-| `scriptdesign` | Code review, reducing coupling, improving maintainability, refactoring scripts |
-| `patterns` | Choosing among ScriptableObject / event / state-machine / object-pool / observer designs |
-| `testability` | Improving testability, isolating logic out of MonoBehaviour, planning EditMode/PlayMode tests |
-| `asmdef` | Module boundaries, faster compiles, clearer dependencies, editor/runtime/test split |
-| `async` | Choosing among Update / coroutine / UniTask / timers, or cleanup & cancellation |
-| `inspector` | SerializeField usage, Tooltip/Header organization, validation, Inspector UX |
-| `scene-contracts` | Required scene objects, component dependencies, bootstrap logic, reference wiring |
-| `adr` | Comparing options, choosing among approaches, locking in a design decision |
-| `performance` | Performance review, frame drops, Update/allocation/pooling/physics optimization |
-| `blueprints` | Starter structure for a small game (platformer, shooter, runner, puzzle, tower-defense, clicker, card) |
+| Project scout, architecture plan, script roles, script review, patterns, testability, asmdef, async model, Inspector UX, scene contracts, ADR, blueprints | `scenario-unity-architecture` → `references/design/README.md` (plugin 02) |
+| Code-level performance red flags (Update sprawl, allocations, logging) | `scenario-unity-performance` → `references/code-red-flags.md` (plugin 02) |
 
 **Library-specific** — before writing code against that library (guards against removed / hallucinated APIs):
 

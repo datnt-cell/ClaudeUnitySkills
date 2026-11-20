@@ -3,8 +3,6 @@ name: unity-primetween
 description: Inspect PrimeTween Free and generate runtime tween scripts
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Checking a PrimeTween installation
 - Exploring supported animation APIs
@@ -53,6 +51,3 @@ Create a PrimeTween MonoBehaviour that uses `Sequence.Chain` and `Sequence.Group
 
 `stepsJson` is a JSON array of `{ "op": "Chain|Group", "tweenKind": "Scale", "duration": 0.2 }`.
 
-## Exact Signatures
-
-Exact names, parameters, defaults, and return values are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.

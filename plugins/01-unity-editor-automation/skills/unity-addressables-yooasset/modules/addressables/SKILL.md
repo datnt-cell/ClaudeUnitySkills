@@ -3,8 +3,6 @@ name: unity-addressables
 description: Manage Addressables groups, entries, profiles and content builds (com.unity.addressables, reflection-based)
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Checking whether Addressables is installed and configured
 - Creating Addressables groups and adding assets to them

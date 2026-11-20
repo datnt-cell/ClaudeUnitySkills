@@ -1,24 +1,17 @@
----
-name: unity-async
-description: Advise on Unity async and lifecycle strategy
----
+# Unity Async Strategy
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
-## Triggers
+**Use when:**
 - Choosing Update/coroutine/UniTask/timer
 - Handling cancellation and cleanup
 - 在 Update/协程/UniTask/定时器间取舍、处理取消与清理
 
-# Unity Async Strategy
+> **Scope**: this module is about **async code you write into the Unity runtime** — `Update`, coroutines, UniTask, cancellation and lifecycle ownership. It is not about the REST protocol's own async jobs. For `jobId` / polling / `job_status` / `GET /jobs/{id}`, see the `batch` module of `unity-dev-workflow` (plugin 01).
 
-> **Scope**: this module is about **async code you write into the Unity runtime** — `Update`, coroutines, UniTask, cancellation and lifecycle ownership. It is not about the REST protocol's own async jobs. For `jobId` / polling / `job_status` / `GET /jobs/{id}`, see the `batch` module (unity-dev-workflow plugin).
+> **Unity 6+:** the built-in `Awaitable` is the default async model before reaching for UniTask; its ownership rules (tokens, never await twice, main-thread traps) are stance 3 and procedures A6/A7/A14 in [`../../SKILL.md`](../../SKILL.md). UniTask specifics live in `unity-tweening` → `unitask-design` (plugin 01).
 
 Use this skill when the user is deciding how runtime work should be scheduled or cleaned up.
 
 ## Guardrails
-
-> **Mode**: Documentation only — no REST skills to gate; load freely under any operating mode (Approval / Auto / Bypass).
 
 - Do not recommend `UniTask` just because it looks more advanced than coroutine.
 - Prefer the simplest scheduling model that fits the use case.
@@ -28,10 +21,11 @@ Use this skill when the user is deciding how runtime work should be scheduled or
 1. First ask whether the task needs per-frame work at all.
 2. If not, prefer events, callbacks, or explicit method calls.
 3. If a short Unity-bound sequence is needed, prefer coroutine.
-4. Recommend `UniTask` only when:
+4. On Unity 6+, prefer `async Awaitable` with a cancellation token over a new dependency.
+5. Recommend `UniTask` only when:
    - the project already uses it, or
    - the user explicitly wants it and accepts the dependency.
-5. Use `Update` only for true continuous simulation, polling, or input loops that cannot be event-driven.
+6. Use `Update` only for true continuous simulation, polling, or input loops that cannot be event-driven.
 
 ## Specific Guidance
 

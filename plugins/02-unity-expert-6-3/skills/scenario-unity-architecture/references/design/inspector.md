@@ -1,23 +1,14 @@
----
-name: unity-inspector
-description: Advise on Unity Inspector authoring UX
----
+# Unity Inspector Design
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
-## Triggers
+**Use when:**
 - Designing component Inspector display
 - Organizing serialized fields
 - Adding tooltips/headers
 - 设计组件在 Inspector 的呈现、组织序列化字段、添加提示/分组
 
-# Unity Inspector Design
-
 Use this skill when scripts need to be easier to author, configure, and review in the Inspector.
 
 ## Guardrails
-
-> **Mode**: Documentation only — no REST skills to gate; load freely under any operating mode (Approval / Auto / Bypass).
 
 - Prefer `[SerializeField] private` over unnecessary public fields.
 - Do not over-decorate with attributes when simple naming suffices.

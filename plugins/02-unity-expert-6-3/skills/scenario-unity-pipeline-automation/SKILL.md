@@ -1,6 +1,6 @@
 ---
 name: scenario-unity-pipeline-automation
-description: "Use when automating a Unity 6.3 content pipeline or build: importing an art drop (FBX, PNG) with AssetPostprocessor rules and naming conventions, generating prefabs or editing scenes from script with correct Undo and SetDirty, Addressables groups, labels and content builds, content-validation tests, batch-mode, command-line or CI builds (Build Profiles, GameCI, GitHub Actions, Accelerator), editor tools; or when textures import wrong or reimport every run, a scripted edit vanishes, bundles duplicate assets, a batch build ignores its defines, or CI cannot activate Unity."
+description: "Use when automating a Unity 6.3 content pipeline or build: importing an art drop (FBX, PNG) with AssetPostprocessor rules and naming conventions, generating prefabs or editing scenes from script with correct Undo and SetDirty, Addressables groups, labels and content builds, content-validation tests, batch-mode, command-line or CI builds (Build Profiles, GameCI, GitHub Actions, Accelerator), editor tools; or when textures import wrong or reimport every run, a scripted edit vanishes, bundles duplicate assets, a batch build ignores its defines, or CI cannot activate Unity. To just apply a concrete edit in an Editor that runs the UnitySkills REST server, use unity-assets-pipeline or unity-addressables-yooasset (plugin 01)."
 license: MIT
 ---
 

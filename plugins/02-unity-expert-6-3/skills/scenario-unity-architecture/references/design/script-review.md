@@ -1,17 +1,10 @@
----
-name: unity-scriptdesign
-description: Advise on Unity gameplay script quality
----
+# Unity Script Design Review
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
-## Triggers
+**Use when:**
 - Reviewing code quality
 - Untangling tightly-coupled scripts
 - Planning a refactor for maintainability
 - 审查代码质量、理顺高耦合脚本、为可维护性规划重构
-
-# Unity Script Design Review
 
 Use this skill before creating gameplay scripts, or after scripts are generated and need a design pass.
 
@@ -51,8 +44,6 @@ The Review Checklist above asks "where does this *class* live". Ask the same que
 Mixing the three lifecycles is what turns a clean class into a god object. A `MonoBehaviour` whose `public float speed` is edited by both the Inspector **and** a power-up script has two owners and no invariant; a bug in either path corrupts the other. The ECS baking pipeline makes this distinction a hard architectural boundary (Authoring → Baker → System), and the discipline transfers directly: if you would not mix an Authoring component with runtime write-back in ECS, do not mix them in a MonoBehaviour either. *Source: `EntitiesSamples/Docs/baking.md:5-16`.*
 
 ## Guardrails
-
-> **Mode**: Documentation only — no REST skills to gate; load freely under any operating mode (Approval / Auto / Bypass).
 
 - Prefer descriptive names over local shorthand.
 - Do not “optimize” readability away for imagined productivity gains.

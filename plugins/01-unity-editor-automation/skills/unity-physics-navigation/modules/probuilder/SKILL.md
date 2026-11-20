@@ -3,8 +3,6 @@ name: unity-probuilder
 description: Model editable meshes with ProBuilder for blockout
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Blocking out levels
 - Building or editing ProBuilder geometry
@@ -134,5 +132,4 @@ unity_skills.call_skill("probuilder_set_material",
 
 ## Exact Signatures
 
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.
 Load `MODELING_REFERENCE.md` for scene design heuristics, furniture decomposition, detailed examples, and extended modeling tips.

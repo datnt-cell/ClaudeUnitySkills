@@ -3,8 +3,6 @@ name: unity-component
 description: Manage GameObject components
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Attaching or removing components
 - Copying components between objects
@@ -197,7 +195,6 @@ Add components to multiple objects.
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
 
-
 **Returns**: `{success, totalItems, successCount, failCount, results: [{success, gameObject, componentType, added}]}`
 
 ```python
@@ -214,7 +211,6 @@ Remove components from multiple objects.
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
 
-
 **Returns**: `{success, totalItems, successCount, failCount, results: [{success, gameObject, componentType, removed}]}`
 
 ```python
@@ -229,7 +225,6 @@ Set properties on multiple objects.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `items` | json string | Yes | - | JSON array of per-item objects (see example below) |
-
 
 **Returns**: `{success, totalItems, successCount, failCount, results: [{success, gameObject, componentType, property, oldValue, newValue}]}`
 
@@ -375,13 +370,9 @@ Enable or disable a component (Behaviour, Renderer, Collider, etc.).
 **Returns:** `{ success, gameObject, componentType, enabled }`
 
 ---
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.
-
 ## Common Errors
 
-Full transport-level codes (COMPILING/RATE_LIMIT etc.) are in the unity-core plugin (optional), references/protocol-error-codes.md.
+Full transport-level codes (COMPILING/RATE_LIMIT etc.): `unity-core/references/protocol-error-codes.md`.
 
 | Error | Trigger | Fix |
 |---|---|---|

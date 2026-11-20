@@ -1,18 +1,11 @@
----
-name: unity-architecture
-description: Advise on Unity gameplay and system architecture
----
+# Unity Architecture Advisor
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
-## Triggers
+**Use when:**
 - Planning code organization
 - Splitting responsibilities
 - Reducing coupling
 - Choosing refactor direction
 - 规划代码结构、划分职责、降低耦合、确定重构方向
-
-# Unity Architecture Advisor
 
 Use this before generating lots of gameplay scripts or when the user asks for a cleaner architecture.
 
@@ -77,15 +70,13 @@ A missing guard is the difference between "doesn't run yet" (safe) and "runs wit
 
 ## Guardrails
 
-> **Mode**: Documentation only — no REST skills to gate; load freely under any operating mode (Approval / Auto / Bypass).
-
 - Do not start from a giant reusable framework unless the project truly needs it.
 - Do not add layers just to satisfy textbook SOLID wording.
 - Prefer a small architecture that can grow, not an impressive one that slows iteration.
 
-## Load Related Advisory Modules When Needed
+## Related design checklists
 
-- Pattern choice: see `patterns` (unity-scripting plugin)
-- Async / Update / UniTask decisions: see `async` (unity-scripting plugin)
-- Inspector-facing field design: see [`../inspector/SKILL.md`](../inspector/SKILL.md)
-- Script quality review: see `scriptdesign` (unity-scripting plugin)
+- Pattern choice: [patterns.md](patterns.md)
+- Async / Update / UniTask / Awaitable decisions: [async-model.md](async-model.md)
+- Inspector-facing field design: [inspector.md](inspector.md)
+- Script quality review: [script-review.md](script-review.md)

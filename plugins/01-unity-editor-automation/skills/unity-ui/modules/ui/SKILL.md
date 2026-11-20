@@ -3,8 +3,6 @@ name: unity-ui
 description: Create and lay out Unity UGUI screens
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Building UGUI screens
 - Adding Canvas elements
@@ -208,12 +206,11 @@ unity_skills.call_skill("ui_layout_children", name="MenuPanel", layoutType="Vert
 
 ## Exact Signatures
 
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.
 Load `UI_REFERENCE.md` for extended element creation details, property tables, and larger UGUI examples.
 
 ## Common Errors
 
-Full transport-level codes (COMPILING/RATE_LIMIT etc.) are in the unity-core plugin (optional), references/protocol-error-codes.md.
+Full transport-level codes (COMPILING/RATE_LIMIT etc.): `unity-core/references/protocol-error-codes.md`.
 
 | Error | Trigger | Fix |
 |---|---|---|

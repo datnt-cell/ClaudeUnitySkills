@@ -1,6 +1,6 @@
 ---
 name: scenario-unity-architecture
-description: "Use when structuring Unity 6.3 C# code: ScriptableObject data vs runtime state, events and services, inventory, health, save and load, Input System actions and key rebinding, async with Awaitable, assembly definitions, Enter Play Mode and domain reload, .meta files, Git, Smart Merge and LFS. Also when 'my save works in the Editor but not in the build', statics keep values on the second Play, events fire twice or never, an await runs after its object died, rebinds are lost on relaunch, a renamed class loses its data, a scene merge breaks."
+description: "Use when structuring Unity 6.3 C# code: ScriptableObject data vs runtime state, events and services, inventory, health, save and load, Input System actions and key rebinding, async with Awaitable, assembly definitions, Enter Play Mode and domain reload, .meta files, Git, Smart Merge and LFS. Also when 'my save works in the Editor but not in the build', statics keep values on the second Play, events fire twice or never, an await runs after its object died, rebinds are lost on relaunch, a renamed class loses its data, a scene merge breaks. Also for design-time planning and review without running Unity: scouting an existing project, module boundaries, MonoBehaviour vs plain C# roles, pattern choice, testability seams, ADRs, small-game blueprints, scene wiring contracts, Inspector authoring UX. To just apply a concrete edit in an Editor that runs the UnitySkills REST server, use unity-scripting (plugin 01)."
 license: MIT
 ---
 
@@ -218,4 +218,7 @@ and write its answers into the plan.
 - [`references/gui-paths.md`](references/gui-paths.md): menus and windows for the same tasks.
 - [`references/sources.md`](references/sources.md): sources, credentials, URLs, best timestamps,
   revision history.
+- [`references/design/`](references/design/README.md): version-agnostic design checklists (project
+  scout, architecture plan, blueprints, script roles, script review, patterns, async model, asmdef,
+  testability, scene contracts, Inspector UX, ADR). Start from its README table.
 - `scripts/ut_arch.py`, `scripts/AgentKit/Architecture/*.cs`, `scripts/templates/`: the tested code.

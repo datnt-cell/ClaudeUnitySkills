@@ -3,8 +3,6 @@ name: unity-cinemachine
 description: Set up Cinemachine Virtual Cameras
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Creating or tuning Cinemachine cameras
 - Configuring follow/look-at/noise
@@ -409,7 +407,3 @@ import unity_skills
 unity_skills.call_skill("cinemachine_create_vcam", name="PlayerCam")
 unity_skills.call_skill("cinemachine_set_targets", vcamName="PlayerCam", followName="Player", lookAtName="Player")
 ```
-
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.

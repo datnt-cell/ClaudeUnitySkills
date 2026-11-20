@@ -82,23 +82,10 @@ Module docs. Start with [./SKILL.md](./SKILL.md) for mode switching and schema-f
 
 ## Advisory Design Modules
 
-Documentation only — these modules define no REST skills.
+Documentation only — these modules define no REST skills. General architecture/design checklists (project scout, patterns, async model, asmdef, script roles, ADR, blueprints, scene contracts, Inspector UX, code red flags) moved to plugin 02: `scenario-unity-architecture` → `references/design/` and `scenario-unity-performance` → `references/code-red-flags.md`.
 
 | Module | Description |
 |--------|-------------|
-| project-scout (unity-architecture-advisory plugin) | Inspect existing project |
-| architecture (unity-architecture-advisory plugin) | Plan system boundaries |
-| adr (unity-architecture-advisory plugin) | Record tradeoffs |
-| performance (unity-architecture-advisory plugin) | Review hot paths |
-| asmdef (unity-scripting plugin) | Plan asmdef deps |
-| blueprints (unity-architecture-advisory plugin) | Small-game blueprints |
-| script-roles (unity-scripting plugin) | Assign class roles |
-| scene-contracts (unity-architecture-advisory plugin) | Define scene wiring |
-| testability (unity-scripting plugin) | Extract testable logic |
-| patterns (unity-scripting plugin) | Choose patterns |
-| async (unity-scripting plugin) | Choose async model |
-| inspector (unity-architecture-advisory plugin) | Design authoring UX |
-| scriptdesign (unity-scripting plugin) | Review script structure |
 | yooasset-design (unity-addressables-yooasset plugin) | YooAsset v2.3.18 source-anchored rules (init/default-package shortcuts/playmode/handles/loading/update/filesystem/build/pitfalls) |
 | addressables-design (unity-addressables-yooasset plugin) | Addressables dual-version (1.22.3 Unity 2022 / 2.9.1 Unity 6) source-anchored rules (init/handles/loading/scene/update/download/assetref/pitfalls) with migration table |
 | unitask-design (unity-tweening plugin) | UniTask 2.5.10 source-anchored rules (basics/playerloop/cancellation/composition/conversion/asyncenumerable/triggers/pitfalls) |

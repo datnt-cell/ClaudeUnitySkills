@@ -8,15 +8,15 @@ Mỗi nhóm là một plugin độc lập — thêm marketplace một lần, cà
 
 ```
 plugins/
-├── 01-unity-editor-automation/   13 skill – gọi Unity Editor qua REST
+├── 01-unity-editor-automation/   12 skill – gọi Unity Editor qua REST
 ├── 02-unity-expert-6-3/          14 skill – chuyên gia Unity 6.3 (đo lường)
 ├── 03-game-feel/                  1 skill – cảm giác chơi & juice
 └── 04-audio-production/           8 skill – tạo/cắt/ghép/trộn âm thanh
 ```
 
-Mỗi nhóm có `README.md` tiếng Việt mô tả chi tiết từng skill. Tổng: **36 skill**.
+Mỗi nhóm có `README.md` tiếng Việt mô tả chi tiết từng skill. Tổng: **35 skill**.
 
-## 01 · Tự động hoá Editor (13)
+## 01 · Tự động hoá Editor (12)
 
 Gọi Unity Editor từ chat qua REST server của gói `UnitySkills`
 (`localhost:8090`–`8100`, Unity 2022.3+/6000.x).
@@ -27,14 +27,13 @@ Gọi Unity Editor từ chat qua REST server của gói `UnitySkills`
 | `unity-scene-authoring` | GameObject, Component, Prefab, Scene |
 | `unity-rendering` | Material, Light, Shader Graph, Volume, URP, Decal |
 | `unity-ui` | UGUI, UI Toolkit |
-| `unity-scripting` | Script, ScriptableObject + tư vấn thiết kế/asmdef/async |
+| `unity-scripting` | Tạo/sửa Script, ScriptableObject |
 | `unity-assets-pipeline` | Import, dọn dẹp, tối ưu, package, validation |
 | `unity-animation-timeline` | Animator, Timeline, Cinemachine, camera |
 | `unity-physics-navigation` | Physics, NavMesh, Terrain, ProBuilder |
 | `unity-addressables-yooasset` | Addressables, YooAsset, HybridCLR |
 | `unity-tweening` | DOTween, PrimeTween, UniTask |
 | `unity-dev-workflow` | Batch job, debug/console, profiler, history, Test Runner |
-| `unity-architecture-advisory` | Project-scout, ADR, blueprint, performance review |
 | `unity-editor-tools` | Sửa YAML tay, Unity CLI, behavior graph |
 
 ## 02 · Chuyên gia Unity 6.3 (14)
@@ -46,7 +45,7 @@ Mỗi quy trình kèm số liệu, test và ảnh chụp. Có toolkit Python `ut
 | `scenario-unity-expert` | Skill dẫn: batch mode, editor đang chạy, Unity CLI, Test Framework |
 | `scenario-unity-2d` | Sprite/PPU, atlas, Tilemap, 2D light, platformer, camera, shake |
 | `scenario-unity-animation` | Mixamo, Animator, root motion, IK, Timeline, Cinemachine 3 |
-| `scenario-unity-architecture` | SO vs runtime state, event, save/load, asmdef, Git |
+| `scenario-unity-architecture` | SO vs runtime state, event, save/load, asmdef, Git + checklist thiết kế (pattern, ADR, blueprint, script review) |
 | `scenario-unity-gameplay` | AI, NavMesh, state machine, projectile, pooling, DOTS, Netcode |
 | `scenario-unity-mobile` | Android/iOS: budget, texture, safe area, AAB, IAP, ads |
 | `scenario-unity-performance` | FPS, spike, GC, draw call, Profiler, LOD, shader warm-up |
@@ -60,6 +59,28 @@ Mỗi quy trình kèm số liệu, test và ảnh chụp. Có toolkit Python `ut
 
 > **Bắt buộc giữ nguyên cụm:** các skill chuyên gia import `scripts/` của
 > `scenario-unity-expert` theo thư mục anh em. Không cài lẻ, không đổi tên thư mục.
+
+## 01 hay 02? (phân vai)
+
+Hai nhóm phủ cùng chủ đề nhưng khác vai trò:
+
+- **02 quyết định, chẩn đoán, chứng minh**: chọn cách làm, sửa lỗi "trông sai / chạy sai", đo số liệu.
+- **01 thao tác ngay trong Editor đang mở** (qua REST server UnitySkills): thêm light, đổi
+  material, tạo Canvas, ghi script…
+
+| Chủ đề | 02 (biết) | 01 (làm) |
+|---|---|---|
+| UI | `scenario-unity-ui` | `unity-ui` |
+| Ánh sáng, URP, post | `scenario-unity-rendering-lighting` | `unity-rendering` |
+| Shader | `scenario-unity-shaders` | `unity-rendering` |
+| Animation, camera | `scenario-unity-animation` | `unity-animation-timeline` |
+| Physics, NavMesh, AI | `scenario-unity-gameplay` | `unity-physics-navigation` |
+| Terrain, level | `scenario-unity-world-building` | `unity-physics-navigation` |
+| Import, Addressables, build | `scenario-unity-pipeline-automation` | `unity-assets-pipeline`, `unity-addressables-yooasset` |
+| Hiệu năng | `scenario-unity-performance` | `unity-dev-workflow` |
+| Kiến trúc code | `scenario-unity-architecture` | `unity-scripting` |
+
+Description của mỗi cặp đều ghi rõ "không dùng khi… → dùng skill kia" để Claude chọn đúng.
 
 ## 03 · Game Feel & Juice (1)
 

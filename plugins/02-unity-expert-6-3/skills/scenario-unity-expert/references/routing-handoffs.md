@@ -26,6 +26,29 @@ authored outside Unity, 1 unit = 1 m on import, scale checked by `AgentAudit.Aud
 scenario-unreal-expert (comparisons only); scenario-3d, scenario-textures, scenario-skyboxes
 generate meshes, textures and skyboxes that arrive through the import audit.
 
+### Knowing vs doing: plugin 01 (`unity-*`, REST)
+
+When the marketplace's plugin 01 is installed and the user's Editor runs the UnitySkills REST
+server (`GET /health` on `localhost:8090`-`8100`), small concrete edits ("add a light", "set this
+material color", "create a Canvas") go straight to the `unity-*` skill; the decision, diagnosis
+and proof stay here. Rule: **this team decides and proves; `unity-*` executes one-off edits in the
+open Editor.** Without the REST server, execute through this team's channels as usual.
+
+| Domain | Decides / diagnoses / proves (plugin 02) | Executes in the open Editor (plugin 01) |
+| --- | --- | --- |
+| UI | scenario-unity-ui | unity-ui |
+| Lighting, post, URP assets | scenario-unity-rendering-lighting | unity-rendering |
+| Shaders, Shader Graph | scenario-unity-shaders | unity-rendering (shader, shadergraph modules) |
+| Animator, Timeline, Cinemachine | scenario-unity-animation | unity-animation-timeline |
+| Physics, NavMesh, AI | scenario-unity-gameplay | unity-physics-navigation |
+| Terrain, ProBuilder, levels | scenario-unity-world-building | unity-physics-navigation (terrain, probuilder) |
+| Import rules, Addressables, builds | scenario-unity-pipeline-automation | unity-assets-pipeline, unity-addressables-yooasset |
+| Profiling, frame cost | scenario-unity-performance | unity-dev-workflow (profiler, console) |
+| Code structure, design reviews | scenario-unity-architecture (+ `references/design/`) | unity-scripting |
+| GameObjects, prefabs, scenes | (any owner) | unity-scene-authoring |
+| Tweens, UniTask, YooAsset, HybridCLR | (none here) | unity-tweening, unity-addressables-yooasset |
+| Game feel, juice | unity-game-feel (+ scenario-unity-2d for 2D systems) | unity-tweening for UI punch |
+
 ## 2. Seams: items two owners each assumed the other covered
 
 Blind grading round 1 (`tests/grading/Y*_grade.md`, "missing from both") found expert items that

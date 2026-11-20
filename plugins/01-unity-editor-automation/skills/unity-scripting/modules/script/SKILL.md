@@ -3,8 +3,6 @@ name: unity-script
 description: Create, read and analyze C# scripts
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 ## Triggers
 - Authoring or editing C# code
 - Searching across scripts
@@ -15,7 +13,7 @@ description: Create, read and analyze C# scripts
 # Unity Script Skills
 
 > **BATCH-FIRST**: Use `script_create_batch` when creating 2+ scripts.
-> **DESIGN-FIRST**: Before creating gameplay scripts, actively consider coupling, performance, and maintainability. In an existing project, load `project-scout` (unity-architecture-advisory plugin) first. If the user is asking for architecture or refactoring advice, load `architecture` (unity-architecture-advisory plugin) and then `../patterns/SKILL.md`, `../async/SKILL.md`, `inspector` (unity-architecture-advisory plugin), `performance` (unity-architecture-advisory plugin), `../script-roles/SKILL.md`, `scene-contracts` (unity-architecture-advisory plugin), `../testability/SKILL.md`, or `../scriptdesign/SKILL.md` as needed.
+> **DESIGN-FIRST**: Before creating gameplay scripts, actively consider coupling, performance, and maintainability. Design checklists (project scout, architecture plan, script roles, patterns, async model, testability, scene contracts, Inspector UX, script review) live in `scenario-unity-architecture` → `references/design/README.md` (plugin 02). Read the matching one first when the user asks for architecture or refactoring advice; this module only writes the code.
 
 ## Operating Mode
 
@@ -260,13 +258,9 @@ Move a script to a new folder.
 **Returns:** `{ success, status, path, jobId, oldPath, newPath, serverAvailability? }`
 
 ---
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.
-
 ## Common Errors
 
-Full transport-level codes (COMPILING/RATE_LIMIT etc.) are in the unity-core plugin (optional), references/protocol-error-codes.md.
+Full transport-level codes (COMPILING/RATE_LIMIT etc.): `unity-core/references/protocol-error-codes.md`.
 
 | Error | Trigger | Fix |
 |---|---|---|

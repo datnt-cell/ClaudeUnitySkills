@@ -1,6 +1,6 @@
 ---
 name: scenario-unity-shaders
-description: "Use when a Unity 6.3 URP task involves shaders: hand-written HLSL, Shader Graph water, toon, dissolve or outline, Custom Function nodes, a renderer feature or full-screen effect on Render Graph, compute shaders, shader variants, keywords, stripping, Shader Build Settings, PSO warm-up, or shader cost; or when a material turns pink or invisible, casts no shadow, ignores extra lights under Forward+, an effect 'does nothing', the game stutters the first time something appears, or builds bloat with variants."
+description: "Use when a Unity 6.3 URP task involves shaders: hand-written HLSL, Shader Graph water, toon, dissolve or outline, Custom Function nodes, a renderer feature or full-screen effect on Render Graph, compute shaders, shader variants, keywords, stripping, Shader Build Settings, PSO warm-up, or shader cost; or when a material turns pink or invisible, casts no shadow, ignores extra lights under Forward+, an effect 'does nothing', the game stutters the first time something appears, or builds bloat with variants. To just apply a concrete edit in an Editor that runs the UnitySkills REST server, use unity-rendering (plugin 01)."
 license: MIT
 ---
 

@@ -3,8 +3,6 @@ name: unity-cli
 description: Guide for using the experimental Unity CLI with bound UnitySkills projects
 ---
 
-> **Before calling any skill in this module:** if you are about to call a skill with parameters guessed from its name or description, STOP — read this file (or fetch its schema via `GET /skills/recommend?includeSchema=true`) first. If you already have the parameter definitions from recommend/schema, you may proceed straight to dryRun.
-
 # Unity CLI (advisory)
 
 **Advisory module — no REST skills.** All commands here run in YOUR shell on the user's machine, not through the REST server. That is the point: they work while the Unity Editor is **closed**.
@@ -226,7 +224,3 @@ Do **not** treat this as "CLI not installed" and prompt the user to reinstall. I
 - **beta9+** — `open` exits `6`/`OPEN_EDITOR_EXITED` on early Editor death (older: always `0`); `build` refuses an already-open project; `test --affected`; read-only `skill show`; `version --format json`; `UNITY_NO_CLI_INVOKED_TELEMETRY=1`; `doctor` no longer hangs on macOS keychain prompts; `projects verify` no longer flags native plug-in folders (`.bundle/.framework/.androidlib/.plugin`).
 
 The safest way to branch is to run `<cliPath> --version` (beta9+: `version --format json`) and `<cliPath> <command> --help` at the start of a session and act on what the binary actually reports.
-
-## Exact Signatures
-
-Exact names, parameters, defaults, and returns are defined by `GET /skills/schema` or `unity_skills.get_skill_schema()`, not by this file.
